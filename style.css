@@ -1,0 +1,19 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+video {
+    display: block;
+    margin: auto;
+    transform: translate(0%, 50%);
+    width:400px;
+
+}
+/* Add more CSS reset styles as needed */
