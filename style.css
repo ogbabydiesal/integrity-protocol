@@ -1,19 +1,54 @@
 /* CSS Reset */
-* {
+html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: blue;
+    
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-video {
+#controls {
     display: block;
     margin: auto;
-    transform: translate(0%, 50%);
-    width:400px;
+    width:800px;
+    height:200px;
 
+}
+
+
+.vid {
+    display: block;
+    margin: auto;
+    width:800px;
+    
+}
+
+video {
+    float:left;
+    width:800px;
+}
+
+p {
+    padding: 10px;
+    margin:10px;
+}
+.playBar {
+    position:absolute;
+    float:left;
+    width:800px;
+    min-height:370px;
+    background-color:transparent;
+    z-index:300000;
+    text-align: center;
+    top:10%;
+    color:white;
+    font-size: 48px;
+}
+
+highlight {
+    background-color:yellow;
 }
 /* Add more CSS reset styles as needed */

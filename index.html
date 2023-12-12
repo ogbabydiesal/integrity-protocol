@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="KnobMakerC.js"></script>
     <link  type="text/css" rel="stylesheet" href="style.css">
     <title>Integrity Protocol / Lower Limb Lecture</title>
+    <script src="p5.min.js"></script>
+    <script src="integrity.js"></script>
 </head>
 <body>
     <div id="main">
-        <video src="imsysDemo_sqr.mp4"></video>
+        <div class="vid">
+            <video src="Tommy_American_Lyrics.mp4" id="viddy"></video>
+            <div class="playBar" onclick="play()">
+                <p><span style="padding:25px; background-color: black;">click to play</span> </p>
+            </div>
+        </div>
+        
+        <div id="controls">
+            <div class="knob-container">
+                <div class="knob"></div>
+            </div>
+                
+        </div>
     </div>
 </body>
 </html>
