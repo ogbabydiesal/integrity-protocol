@@ -3,7 +3,6 @@ html {
     margin: 0;
     padding: 0;
     background-color: blue;
-    
 }
 
 body {
@@ -15,15 +14,12 @@ body {
     margin: auto;
     width:800px;
     height:200px;
-
 }
-
 
 .vid {
     display: block;
     margin: auto;
     width:800px;
-    
 }
 
 video {
@@ -31,11 +27,12 @@ video {
     width:800px;
 }
 
-p {
-    padding: 10px;
-    margin:10px;
+#sliders {
+    width:300px;
+    height:800px;
 }
-.playBar {
+
+.userInterface {
     position:absolute;
     float:left;
     width:800px;
@@ -48,7 +45,70 @@ p {
     font-size: 48px;
 }
 
-highlight {
-    background-color:yellow;
+#singleSlider {
+    display: block;
+    margin-left:25px;
 }
+
+label {
+    font-size:15px;
+    display: block;
+    margin:0px;
+    text-align: left;
+}
+
+/* Range Sliders */
+input[type="range"] {
+    float:left;
+    -webkit-appearance: none;
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    outline:1px;
+    border-style:solid;
+    border-color: white;
+    opacity: 0.0;
+    -webkit-transition: 1.0s;
+    transition: opacity 1.0s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background-color: white;
+}
+
+.slidey {
+    opacity:0.0;
+}
+
 /* Add more CSS reset styles as needed */
+p {
+    transform: translate(0, 100%);
+    padding: 10px;
+    margin:10px;
+    top:100px;
+}
+

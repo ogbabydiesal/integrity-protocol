@@ -13,16 +13,35 @@
     <div id="main">
         <div class="vid">
             <video src="Tommy_American_Lyrics.mp4" id="viddy"></video>
-            <div class="playBar" onclick="play()">
-                <p><span style="padding:25px; background-color: black;">click to play</span> </p>
+            <div class="userInterface" onclick="play()">
+                <p class="playButton"><span style="padding:25px; background-color:black;">click to play</span></p>
+                <div id="sliders">
+                    <div id="singleSlider">
+                        <input type="range" id="osc" class="slidey" name="osc" class="slidey" min="0.25" max="2.0" step=".01">
+                        <label for="osc" class="slidey">Oscillation</label>
+                    </div>
+                    <div id="singleSlider">
+                        <input type="range" id="depth" class="slidey" name="depth" min="0.25" max="2.0" step=".01">
+                        <label for="depth" class="slidey">Depth</label>
+                    </div>
+                    <div id="singleSlider">
+                        <input type="range" id="grains" name="grains" class="slidey" min="0.25" max="2.0" step=".01">
+                        <label for="grains" class="slidey">Grains</label>
+                    </div>
+                    <div id="singleSlider">
+                        <input type="range" id="pitch" name="pitch" class="slidey" min="0.25" max="2.0" step=".01">
+                        <label for="pitch" class="slidey">Pitch</label>
+                    </div>
+                    <div id="singleSlider">
+                        <input type="range" id="echoes" name="echoes" class="slidey" min="0.25" max="2.0" step=".01">
+                        <label for="echoes" class="slidey">Echoes</label>
+                    </div>
+                    <div id="singleSlider">
+                        <input type="range" id="speed" name="speed" class="slidey" min="0.25" max="2.0" step=".01">
+                        <label for="speed" class="slidey">speed</label>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div id="controls">
-            <div class="knob-container">
-                <div class="knob"></div>
-            </div>
-                
         </div>
     </div>
 </body>
