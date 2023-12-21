@@ -29,6 +29,10 @@ window.addEventListener("load", function() {
     effectInput.oninput = function() {
         wet.value = this.value;
     }
+    delayInput = document.querySelector("#delay");
+    delayInput.oninput = function() {
+        delay.value = this.value;
+    }
     sizeInput = document.querySelector("#size");
     sizeInput.oninput = function() {
         grainLength.value = this.value;
@@ -69,10 +73,17 @@ const setup = async () => {
     let device = await createDevice({ context, patcher });
     source = context.createMediaElementSource(el);
     source.connect(device.node);
+    const compressor = context.createDynamicsCompressor();
+    compressor.threshold.setValueAtTime(-50, context.currentTime); // in decibels
+    compressor.knee.setValueAtTime(40, context.currentTime);        // in decibels
+    compressor.ratio.setValueAtTime(12, context.currentTime);        // ratio
+    compressor.attack.setValueAtTime(0, context.currentTime);        // in seconds
+    compressor.release.setValueAtTime(0.25, context.currentTime);    // in seconds
     wet = device.parametersById.get("wet");
     pitch = device.parametersById.get("pitch");
     grainLength = device.parametersById.get("grainLength");
     delay = device.parametersById.get("delay");
     echoes = device.parametersById.get("feedback");
-    device.node.connect(context.destination);
+    device.node.connect(compressor);
+    compressor.connect(context.destination);
 };
