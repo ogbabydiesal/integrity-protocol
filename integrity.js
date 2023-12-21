@@ -2,32 +2,36 @@ let canv;
 let offset = 100;
 let el;
 let cover;
+let effectInput;
 let speedInput; 
-let oscInput;
-let depthInput;
+let sizeInput;
+let delayInput;
 let pitchInput;
 let echoInput;
 let echoes;
 let pitch;
-let depth;
+let effect;
 let speed;
 let context;
-let oscillation;
+let wet;
+let grainLength;
+let delay;
+
 
 window.addEventListener("load", function() {
-    el = document.getElementById("viddy");
+    el = document.querySelector("#viddy");
     cover = document.querySelector(".playButton");
     speedInput = document.querySelector("#speed");
     speedInput.oninput = function() {
         el.playbackRate = this.value;
     }
-    oscInput = document.querySelector("#osc");
-    oscInput.oninput = function() {
-        oscillation.value = this.value;
+    effectInput = document.querySelector("#effect");
+    effectInput.oninput = function() {
+        wet.value = this.value;
     }
-    depthInput = document.querySelector("#depth");
-    depthInput.oninput = function() {
-        depth.value = this.value;
+    sizeInput = document.querySelector("#size");
+    sizeInput.oninput = function() {
+        grainLength.value = this.value;
     }
     pitchInput = document.querySelector("#pitch");
     pitchInput.oninput = function() {
@@ -56,29 +60,19 @@ function showControls() {
 }
 
 const { createDevice } = RNBO;
-// Create AudioContext
-
 
 const setup = async () => {
     let WAContext = window.AudioContext || window.webkitAudioContext;
     context = new WAContext();
     let rawPatcher = await fetch("integrity.export.json");
     let patcher = await rawPatcher.json();
-
     let device = await createDevice({ context, patcher });
-    
     source = context.createMediaElementSource(el);
-    // Connect the devices in series
     source.connect(device.node);
-    // This connects the device to audio output, but you may still need to call context.resume()
-    // from a user-initiated function.
-    depth = device.parametersById.get("depth");
-    oscillation = device.parametersById.get("osc");
+    wet = device.parametersById.get("wet");
     pitch = device.parametersById.get("pitch");
+    grainLength = device.parametersById.get("grainLength");
+    delay = device.parametersById.get("delay");
     echoes = device.parametersById.get("feedback");
     device.node.connect(context.destination);
 };
-
-// We can't await an asynchronous function at the top level, so we create an asynchronous
-// function setup, and then call it without waiting for the result.
-

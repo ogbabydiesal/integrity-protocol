@@ -28,41 +28,42 @@ video {
 }
 
 #sliders {
-    width:300px;
-    height:800px;
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .userInterface {
     position:absolute;
     float:left;
     width:800px;
-    min-height:370px;
-    background-color:transparent;
+    min-height:450px;
     z-index:300000;
-    text-align: center;
-    top:10%;
+    text-align: center;     
     color:white;
     font-size: 48px;
 }
 
 #singleSlider {
-    display: block;
-    margin-left:25px;
+    display: flex;
+    flex-direction: column;
+    width:100px;
+    align-content: space-between;  
 }
 
 label {
     font-size:15px;
-    display: block;
-    margin:0px;
-    text-align: left;
+    margin-bottom: 50px;  
 }
 
 /* Range Sliders */
 input[type="range"] {
-    float:left;
-    -webkit-appearance: none;
+    display: flex;
+    justify-content:center;
     width: 100px;
-    height: 10px;
+    height: 20px;
     background-color: black;
     outline:1px;
     border-style:solid;
@@ -70,6 +71,10 @@ input[type="range"] {
     opacity: 0.0;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
+    appearance: none;
+    -webkit-appearance: none;
+    transform: rotate(-90deg);
+            
 }
 
 input[type="range"]::-webkit-slider-thumb {
