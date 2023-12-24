@@ -80,10 +80,15 @@ const setup = async () => {
     compressor.attack.setValueAtTime(0, context.currentTime);        // in seconds
     compressor.release.setValueAtTime(0.25, context.currentTime);    // in seconds
     wet = device.parametersById.get("wet");
+    wet.value = "0.5";
     pitch = device.parametersById.get("pitch");
+    pitch.value = "2.0";
     grainLength = device.parametersById.get("grainLength");
+    grainLength.value = "120";
     delay = device.parametersById.get("delay");
+    delay.value = "8000";
     echoes = device.parametersById.get("feedback");
+    echoes.value = "0.6";
     device.node.connect(compressor);
     compressor.connect(context.destination);
 };
