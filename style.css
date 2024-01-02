@@ -1,7 +1,7 @@
 /* CSS Reset */
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background-color: blue;
 }
 
@@ -37,7 +37,6 @@ video {
 
 .userInterface {
     position:absolute;
-    float:left;
     width:800px;
     min-height:450px;
     z-index:300000;
@@ -55,17 +54,17 @@ video {
 
 label {
     font-size:15px;
-    margin-bottom: 50px;  
+    margin-bottom: 50px;
+     
 }
 
 /* Range Sliders */
 input[type="range"] {
     display: flex;
-    justify-content:center;
+    margin:0px;
     width: 100px;
     height: 20px;
     background-color: black;
-    outline:1px;
     border-style:solid;
     border-color: white;
     opacity: 0.0;
@@ -73,8 +72,7 @@ input[type="range"] {
     transition: opacity 1.0s;
     appearance: none;
     -webkit-appearance: none;
-    transform: rotate(-90deg);
-            
+    transform: rotate(-90deg);         
 }
 
 input[type="range"]::-webkit-slider-thumb {

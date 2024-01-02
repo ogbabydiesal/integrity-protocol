@@ -13,12 +13,11 @@
         <div class="vid">
             <video src="integrityprotocol.mp4" id="viddy" disablePictureInPicture playsinline></video>
             <div class="userInterface" onclick="play()">
-            <p class="playButton"><span style="padding:25px; background-color:black;">click to play</span></p>
+                <p class="playButton"><span style="padding:25px; background-color:black;">click to play</span></p>
                 <div id="sliders">
                     <div id="singleSlider">
                         <label for="osc" class="slidey">Mix</label>
-                        <input type="range" id="effect" class="slidey" name="osc" class="slidey" min="0.01" max="1.0" step=".01" value="0.5">  
-                        
+                        <input type="range" id="effect" class="slidey" name="osc" class="slidey" min="0.01" max="1.0" step=".01" value="0.5">      
                     </div>
                     <div id="singleSlider">
                         <label for="depth" class="slidey">Delay</label>
@@ -30,7 +29,7 @@
                     </div>
                     <div id="singleSlider">
                         <label for="pitch" class="slidey">Pitch</label>
-                        <input type="range" id="pitch" name="pitch" class="slidey" min="-.80" max="3.0" step=".01" value="2">
+                        <input type="range" id="pitch" name="pitch" class="slidey" min="-.5" max="4.0" step=".5" value="2">
                     </div>
                     <div id="singleSlider">
                         <label for="echoes" class="slidey">Feedback</label>
