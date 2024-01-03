@@ -20,7 +20,7 @@ let delay;
 
 window.addEventListener("load", function() {
     el = document.querySelector("#viddy");
-    cover = document.querySelector(".playButton");
+    cover = document.querySelector("#playButton");
     speedInput = document.querySelector("#speed");
     speedInput.oninput = function() {
         el.playbackRate = this.value;

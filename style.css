@@ -45,6 +45,8 @@ video {
     font-size: 48px;
 }
 
+
+
 #singleSlider {
     display: flex;
     flex-direction: column;
@@ -55,7 +57,9 @@ video {
 label {
     font-size:15px;
     margin-bottom: 50px;
-     
+    opacity: 0.0;
+    -webkit-transition: 1.0s;
+    transition: opacity 1.0s;
 }
 
 /* Range Sliders */
@@ -66,6 +70,7 @@ input[type="range"] {
     height: 20px;
     background-color: black;
     border-style:solid;
+    border-width:1px;
     border-color: white;
     opacity: 0.0;
     -webkit-transition: 1.0s;
@@ -82,6 +87,8 @@ input[type="range"]::-webkit-slider-thumb {
     height: 10px;
     background-color: white;
     cursor: pointer;
+    -webkit-transition: 1.0s;
+    transition: opacity 1.0s;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -89,6 +96,8 @@ input[type="range"]::-moz-range-thumb {
     height: 10px;
     background-color: white;
     cursor: pointer;
+    -webkit-transition: 1.0s;
+    transition: opacity 1.0s;
 }
 
 
@@ -111,5 +120,11 @@ p {
     padding: 10px;
     margin:10px;
     top:100px;
+    background-color: black;
 }
 
+#playbutton{
+    padding:25px; 
+    position:absolute;
+    background-color: black;
+}
