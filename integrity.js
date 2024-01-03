@@ -74,11 +74,11 @@ const setup = async () => {
     source = context.createMediaElementSource(el);
     source.connect(device.node);
     const compressor = context.createDynamicsCompressor();
-    compressor.threshold.setValueAtTime(-50, context.currentTime); // in decibels
-    compressor.knee.setValueAtTime(40, context.currentTime);        // in decibels
-    compressor.ratio.setValueAtTime(12, context.currentTime);        // ratio
-    compressor.attack.setValueAtTime(0, context.currentTime);        // in seconds
-    compressor.release.setValueAtTime(0.25, context.currentTime);    // in seconds
+    compressor.threshold.setValueAtTime(-50, context.currentTime);
+    compressor.knee.setValueAtTime(40, context.currentTime);
+    compressor.ratio.setValueAtTime(12, context.currentTime);
+    compressor.attack.setValueAtTime(0, context.currentTime);
+    compressor.release.setValueAtTime(0.25, context.currentTime);
     wet = device.parametersById.get("wet");
     wet.value = "0.5";
     pitch = device.parametersById.get("pitch");

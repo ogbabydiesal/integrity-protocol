@@ -31,8 +31,7 @@ video {
     height:400px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 .userInterface {
@@ -44,8 +43,6 @@ video {
     color:white;
     font-size: 48px;
 }
-
-
 
 #singleSlider {
     display: flex;
@@ -100,8 +97,6 @@ input[type="range"]::-moz-range-thumb {
     transition: opacity 1.0s;
 }
 
-
-
 input[type="range"]::-webkit-slider-thumb:hover {
     background-color: white;
 }
@@ -116,15 +111,11 @@ input[type="range"]::-moz-range-thumb:hover {
 
 /* Add more CSS reset styles as needed */
 p {
-    transform: translate(0, 100%);
+    transform: translate(70%, 100%);
     padding: 10px;
     margin:10px;
     top:100px;
+    width:300px;
     background-color: black;
 }
 
-#playbutton{
-    padding:25px; 
-    position:absolute;
-    background-color: black;
-}
