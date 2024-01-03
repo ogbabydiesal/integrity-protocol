@@ -1,12 +1,13 @@
+
 /* CSS Reset */
 html {
     margin: 0px;
     padding: 0px;
-    background-color: blue;
+    background-color: black;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
 }
 
 #controls {
@@ -23,8 +24,9 @@ body {
 }
 
 video {
+    /* make responsive*/
+    max-width: 100%;
     float:left;
-    width:800px;
 }
 
 #sliders {

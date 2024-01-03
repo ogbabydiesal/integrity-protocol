@@ -1,5 +1,3 @@
-let canv;
-let offset = 100;
 let el;
 let cover;
 let effectInput;
@@ -16,7 +14,6 @@ let context;
 let wet;
 let grainLength;
 let delay;
-
 
 window.addEventListener("load", function() {
     el = document.querySelector("#viddy");
@@ -39,7 +36,14 @@ window.addEventListener("load", function() {
     }
     pitchInput = document.querySelector("#pitch");
     pitchInput.oninput = function() {
-        pitch.value = this.value;
+        var val = this.value;
+        if (this.value == 0) {
+            val = -1;
+        }
+        else if (this.value == -0.5) {
+            val = -2.0;
+        }
+        pitch.value = val;
     }
     echoInput = document.querySelector("#echoes");
     echoInput.oninput = function() {
