@@ -58,8 +58,7 @@ video {
     display: flex;
     margin-top: -20%;
     flex-direction: column;
-    width:100%;
-    
+    width:100%;  
 }
 
 label {
