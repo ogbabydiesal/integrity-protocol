@@ -2,59 +2,69 @@ html {
     margin: 0px;
     padding: 0px;
     background-color: black;
+    color: white;
 }
 
 body {
-    font-family: Arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-}
-
-#controls {
-    display: block;
-    margin: auto;
-    width:800px;
-    height:200px;
+    font-family: Arial Impact, 'Arial Narrow Bold', sans-serif, sans-serif;
 }
 
 .vid {
     display: block;
     margin: auto;
-    width:800px;
+    width:80%;
+    min-width: 800px;
+    max-width: 1080px;
 }
 
 video {
-    /* make responsive*/
-    max-width: 100%;
+    width:100%;
+    max-width: 1080px;
     float:left;
-}
-
-#sliders {
-    height:400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
 }
 
 .userInterface {
     position:absolute;
-    width:800px;
-    min-height:450px;
+    width:80%;
+    min-width: 800px;
+    max-width: 1080px;
     z-index:300000;
+    display: flex;
+    justify-content: center;
     text-align: center;     
-    color:white;
-    font-size: 48px;
+    font-size: calc(48px + 0.5vw); 
+}
+
+#playButton {
+    position:absolute;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 25%;
+}
+#sliders {
+    min-height:500px;
+    max-height: 580px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 #singleSlider {
     display: flex;
+    margin-top: -20%;
     flex-direction: column;
-    width:150px;
-    align-content: space-between;
-    margin:-20px; 
+    width:100%;
+    
 }
 
 label {
     font-size:15px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     opacity: 0.0;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
@@ -64,7 +74,8 @@ label {
 input[type="range"] {
     display: flex;
     margin:0px;
-    width: 150px;
+    width: 100%;
+    min-width:100px;
     height: 2px;
     opacity: 0.0;
     -webkit-transition: 1.0s;
@@ -111,12 +122,9 @@ input[type="range"]::-moz-range-thumb:hover {
     transform: translate(0%, -250%) scale(1, 2.5);
 }
 
-/* Add more CSS reset styles as needed */
 p {
-    transform: translate(70%, 100%);
     padding: 10px;
     margin:10px;
-    top:100px;
     width:300px;
     background-color: black;
 }
