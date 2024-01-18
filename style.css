@@ -12,8 +12,7 @@ body {
 .vid {
     display: block;
     margin: auto;
-    width:80%;
-    min-width: 800px;
+    width:100%;
     max-width: 1080px;
 }
 
@@ -25,14 +24,13 @@ video {
 
 .userInterface {
     position:absolute;
-    width:80%;
-    min-width: 800px;
+    width:100%;
     max-width: 1080px;
-    z-index:300000;
+    z-index:1;
     display: flex;
     justify-content: center;
     text-align: center;     
-    font-size: calc(48px ); 
+    font-size: 48px; 
 }
 
 #playButton {
@@ -45,26 +43,23 @@ video {
     text-align: center;
     top: 25%;
 }
+
 #sliders {
-    min-height:500px;
-    max-height: 580px;
-    width:100%;
     display: flex;
-    align-items: center;
     justify-content: center; 
+    margin:0px;
+    margin-top:calc(0vh + 10vw);
+    margin-left:-15px;
 }
 
 #singleSlider {
     display: flex;
-    margin-top: -10%;
     flex-direction: column;
-    width:100%;
-    
 }
 
 label {
-    font-size:15px;
-    margin-bottom: calc(80px - 1vw);
+    font-size:calc(1px + 1vw);
+    margin-bottom: calc(2vh + 5vw);
     opacity: 0.0;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
@@ -74,8 +69,7 @@ label {
 input[type="range"] {
     display: flex;
     margin:0px;
-    width: 100%;
-    min-width:100px;
+    width: calc(10vw + 10px);
     height: 2px;
     opacity: 0.0;
     -webkit-transition: 1.0s;
@@ -88,9 +82,9 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width:20px;
-    height:20px;
-    border-radius: 10px;
+    width:calc(10px + 1vw);
+    height:calc(10px + 1vw);
+    border-radius: 1000px;
     background-color: white;
     cursor: pointer;
     -webkit-transition: 1.0s;
@@ -98,9 +92,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width:calc(10px + 1vw);
+    height:calc(10px + 1vw);
+    border-radius: 1000px;
     background-color: white;
     cursor: pointer;
     -webkit-transition: 1.0s;
@@ -119,7 +113,7 @@ input[type="range"]::-moz-range-thumb:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     opacity:0.0; 
-    transform: translate(0%, -250%) scale(1, 2.5);
+    transform: translate(0%, -150%) scale(1, 2.5);
 }
 
 p {

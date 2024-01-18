@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <link  type="text/css" rel="stylesheet" href="style.css">
-    <title>Integrity Protocol / Lower Limb Lecture</title>
-    <script type="text/javascript" src="rnbo.min.js"></script>
-    <script src="integrity.js"></script>
-</head>
-<body>
-    <div class="vid">
-        <video src="integrityprotocol.mp4" id="viddy" disablePictureInPicture playsinline></video>
-        <div class="userInterface" onclick="play()">
-            <div id="playButton">
-                <p class="width">click to play</p>
-            </div>
-            <div id="sliders">
-                <div id="singleSlider">
-                    <label for="osc" class="slidey">MIX</label>
-                    <input type="range" id="effect" class="slidey" name="osc" class="slidey" min="0.01" max="1.0" step=".01" value="0.5">      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <link  type="text/css" rel="stylesheet" href="style.css">
+        <title>Integrity Protocol / Lower Limb Lecture</title>
+        <script type="text/javascript" src="rnbo.min.js"></script>
+        <script src="integrity.js"></script>
+    </head>
+    <body>
+        <div class="vid">
+            <video src="integrityprotocol.mp4" id="viddy" disablePictureInPicture playsinline crossorigin="anonymous"></video>
+            <div class="userInterface" onclick="play()">
+                <div id="playButton">
+                    <p class="width">click to play</p>
                 </div>
-                <div id="singleSlider">
-                    <label for="depth" class="slidey">DELAY</label>
-                    <input type="range" id="delay" class="slidey" name="depth" min="10" max="44100" step="1" value="8000">
-                </div>
-                <div id="singleSlider">
-                    <label for="grains" class="slidey">GRAIN SIZE</label>
-                    <input type="range" id="size" name="grains" class="slidey" min="50" max="300" step="1" value="120">
-                </div>
-                <div id="singleSlider">
-                    <label for="pitch" class="slidey">PITCH</label>
-                    <input type="range" id="pitch" name="pitch" class="slidey" min="-.5" max="4.0" step=".5" value="2">
-                </div>
-                <div id="singleSlider">
-                    <label for="echoes" class="slidey">FEEDBACK</label>
-                    <input type="range" id="echoes" name="echoes" class="slidey" min="0.25" max="0.7" step=".01" value="0.6">
-                </div>
-                <div id="singleSlider">
-                    <label for="speed" class="slidey">SPEED</label>
-                    <input type="range" id="speed" name="speed" class="slidey" min="0.25" max="2.0" step=".01" value="1.0">
+                <div id="sliders">
+                    <div id="singleSlider">
+                        <label for="osc" class="slidey">MIX</label>
+                        <input type="range" id="effect" class="slidey" name="osc" class="slidey" min="0.01" max="1.0" step=".01" value="0.5">      
+                    </div>
+                    <div id="singleSlider">
+                        <label for="depth" class="slidey">DELAY</label>
+                        <input type="range" id="delay" class="slidey" name="depth" min="10" max="44100" step="1" value="8000">
+                    </div>
+                    <div id="singleSlider">
+                        <label for="grains" class="slidey">GRAIN SIZE</label>
+                        <input type="range" id="size" name="grains" class="slidey" min="50" max="300" step="1" value="120">
+                    </div>
+                    <div id="singleSlider">
+                        <label for="pitch" class="slidey">PITCH</label>
+                        <input type="range" id="pitch" name="pitch" class="slidey" min="-.5" max="4.0" step=".5" value="2">
+                    </div>
+                    <div id="singleSlider">
+                        <label for="echoes" class="slidey">FEEDBACK</label>
+                        <input type="range" id="echoes" name="echoes" class="slidey" min="0.25" max="0.7" step=".01" value="0.6">
+                    </div>
+                    <div id="singleSlider">
+                        <label for="speed" class="slidey">SPEED</label>
+                        <input type="range" id="speed" name="speed" class="slidey" min="0.25" max="2.0" step=".01" value="1.0">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
