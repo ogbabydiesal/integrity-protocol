@@ -15,12 +15,6 @@ let wet;
 let grainLength;
 let delay;
 
-
-function firstFrame() {
-    console.log("first frame");
-    el.currentTime = 0; 
-}
-
 window.addEventListener("load", function() {
     el = document.querySelector("#viddy");
     if (this.window.innerWidth < 600) {
