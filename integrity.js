@@ -23,6 +23,9 @@ function firstFrame() {
 
 window.addEventListener("load", function() {
     el = document.querySelector("#viddy");
+    if (this.window.innerWidth < 600) {
+        el.setAttribute("poster", "integrityPoster.jpg");
+    }
     cover = document.querySelector("#playButton");
     speedInput = document.querySelector("#speed");
     speedInput.oninput = function() {
