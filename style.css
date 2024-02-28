@@ -108,7 +108,7 @@ input[type="range"]::-webkit-slider-thumb {
     height:calc(10px + 1vw);
     border-radius: 1000px;
     background-color: white;
-    cursor: pointer;
+    cursor: grab;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
 }
@@ -118,7 +118,7 @@ input[type="range"]::-moz-range-thumb {
     height:calc(10px + 1vw);
     border-radius: 1000px;
     background-color: white;
-    cursor: pointer;
+    cursor: grab;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
 }
