@@ -2,11 +2,12 @@ html {
     margin: 0px;
     padding: 0px;
     background-color: black;
-    color: white;
-    
+    color: white;  
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: Arial Impact, 'Arial Narrow Bold', sans-serif, sans-serif;
     cursor:crosshair;
 }
@@ -24,7 +25,9 @@ body {
 
 .vid {
     display: flex;
-    width:100%; 
+    width:100%;
+    margin: 0px;
+    padding: 0px; 
 }
 
 video {
@@ -58,14 +61,20 @@ video {
 #sliders {
     display: flex;
     justify-content: center; 
+    align-items: center;
     margin:0px;
-    margin-top:calc(10vw);
-    margin-left:-20px;
+    margin-top:calc(10vw); 
+    width:100vw;
 }
 
 #singleSlider {
+    margin:0px;
+    padding:0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 label {
@@ -74,6 +83,7 @@ label {
     opacity: 0.0;
     -webkit-transition: 1.0s;
     transition: opacity 1.0s;
+    cursor:crosshair;
 }
 
 /* Range Sliders */
@@ -87,7 +97,8 @@ input[type="range"] {
     transition: opacity 1.0s;
     appearance: none;
     -webkit-appearance: none;
-    transform: rotate(-90deg);         
+    transform: rotate(-90deg);  
+    cursor:crosshair;       
 }
 
 input[type="range"]::-webkit-slider-thumb {
