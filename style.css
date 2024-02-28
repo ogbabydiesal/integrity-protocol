@@ -3,21 +3,35 @@ html {
     padding: 0px;
     background-color: black;
     color: white;
+    
 }
 
 body {
     font-family: Arial Impact, 'Arial Narrow Bold', sans-serif, sans-serif;
+    cursor:crosshair;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .vid {
-    display: block;
-    margin: auto;
+    display: flex;
     width:100%; 
 }
 
 video {
+    display: flex;
     width:100%;
-    float:left;
+    align-items: center;
+    justify-content: center;
 }
 
 .userInterface {
@@ -46,7 +60,7 @@ video {
     justify-content: center; 
     margin:0px;
     margin-top:calc(10vw);
-    margin-left:-16px;
+    margin-left:-20px;
 }
 
 #singleSlider {
